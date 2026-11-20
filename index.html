@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101820">
+<title>FlexoChat</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;background:#101820;color:white;
+font-family:Arial,sans-serif;
+}
+header{
+background:#17252f;padding:20px;
+display:flex;align-items:center;gap:12px;
+border-bottom:1px solid #263945;
+}
+.logo{color:#16c6a1;font-size:27px;font-weight:bold}
+main{max-width:500px;margin:auto;padding:20px}
+h2{margin-top:30px}
+.card{
+background:#192832;border:1px solid #30434e;
+padding:17px;border-radius:14px;margin:15px 0;
+}
+input{
+width:100%;padding:15px;margin:8px 0;
+border:1px solid #40545f;border-radius:9px;
+background:#101820;color:white;font-size:16px;
+}
+button{
+background:#10b99a;color:#06251e;
+border:0;padding:14px;border-radius:9px;
+font-weight:bold;width:100%;font-size:16px;
+}
+small{color:#a9bbc4}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">F</div>
+<div>
+<strong>FlexoChat</strong><br>
+<small>Connect with everyone</small>
+</div>
+</header>
+<main>
+<h2>Welcome to FlexoChat 👋</h2>
+<p><small>Your space. Your people. Your conversations.</small></p>
+
+<div class="card">
+<h3>Create your account</h3>
+<input id="name" placeholder="Your username">
+<input id="email" type="email" placeholder="Email address">
+<input id="password" type="password" placeholder="Password">
+<button onclick="signup()">Sign Up</button>
+</div>
+
+<div class="card">
+<h3>Already have an account?</h3>
+<input id="loginEmail" type="email" placeholder="Email address">
+<input id="loginPassword" type="password" placeholder="Password">
+<button onclick="login()">Log In</button>
+</div>
+<p id="status"><small>FlexoChat is getting ready!</small></p>
+</main>
+<script>
+function signup(){
+document.getElementById('status').textContent=
+'Account system will be connected in the next step.';
+}
+function login(){
+document.getElementById('status').textContent=
+'Login system will be connected in the next step.';
+}
+</script>
+</body>
+</html>
